@@ -1,6 +1,6 @@
 ## Overview
 
-This is the PyTorch implementation of the paper <StarCANet: A Compact and Expandable Neural Network for Massive MIMO CSI Feedback>.
+This is the PyTorch implementation of the paper <StarCANet: A Compact and Expandable Neural Network for Massive MIMO CSI Feedback>, which has been submitted to IEEE for possible publication.
 
 ## Requirements
 
