@@ -34,6 +34,12 @@ home
 ├── COST2100  # The data folder
 │   ├── DATA_Htestin.mat
 │   ├── ...
+├── checkpoints  # The checkpoints folder
+│   ├── StarCANet-S
+│   ├── StarCANet-M
+│   ├── StarCANet-L
+│   │   ├── in_4.pth
+│   │   ├── ...
 ├── run.sh  # The bash script
 ...
 ```
@@ -58,22 +64,25 @@ python /home/StarCANet/main.py \
 
 ## Results and Reproduction
 
-
-**To reproduce the results, simple add `--evaluate` to `run.sh` and pick the corresponding pre-trained model with `--pretrained`.** An example is shown as follows.
+If you want to reproduce our result, you can directly download the corresponding checkpoints from [Google Drive](https://drive.google.com/drive/folders/1a74vWtBHesCmD6l2jdVhTn4sSYqztuPu?usp=sharing).
+To reproduce the results, simply add `--evaluate` to `run.sh` and pick the corresponding pre-trained model with `--pretrained`. An example is shown as follows.
 
 ``` bash
 python /home/StarCANet/main.py \
   --data-dir '/home/COST2100' \
   --scenario 'in' \
-  --pretrained './checkpoints/in_4.pth' \
+  --pretrained '/home/checkpoints/StarCANet-L/in_4.pth' \
   --evaluate \
   --batch-size 200 \
   --workers 0 \
   --cr 4 \
+  --size 'L'
   --cpu \
   2>&1 | tee test_log.out
 
 ```
+
+**Important Note:** Please ensure that the `--cr` (Compression Ratio) and `--size` (Model Size) parameters **exactly match** the configuration of the pre-trained checkpoint file specified by `--pretrained`. For example, the StarCANet-L/in_4.pth checkpoint used in the example was trained for a $CR=4$ and model size 'L' configuration, and therefore must be used with `--cr 4` and `--size 'L'`. Any parameter mismatch will result in an inability to load the model weights correctly or will lead to erroneous results.
 
 ## Acknowledgment
 
