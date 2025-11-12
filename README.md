@@ -1,6 +1,6 @@
 ## Overview
 
-This is the PyTorch implementation of the paper <StarCANet: A Compact and Expandable Neural Network for Massive MIMO CSI Feedback>, which has been submitted to IEEE for possible publication.
+This is the PyTorch implementation of the paper [StarCANet: A Compact and Efficient Neural Network for Massive MIMO CSI Feedback](https://ieeexplore.ieee.org/document/11237103).
 
 ## Requirements
 
@@ -16,7 +16,7 @@ To use this project, you need to ensure the following requirements are installed
 
 #### A. Data Preparation
 
-The channel state information (CSI) matrix is generated from [COST2100](https://ieeexplore.ieee.org/document/6393523) model. Chao-Kai Wen and Shi Jin group provides a pre-processed version of COST2100 dataset in [Dropbox](https://www.dropbox.com/scl/fo/tqhriijik2p76j7kfp9jl/h?rlkey=4r1zvjpv4lh5h4fpt7lbpus8c&e=1&st=wqinniyn&dl=0), which is easier to use for the CSI feedback task; You can also download it from [Baidu Netdisk](https://pan.baidu.com/s/1Ggr6gnsXNwzD4ULbwqCmjA).
+The channel state information (CSI) matrix is generated from [COST2100](https://ieeexplore.ieee.org/document/6393523) model. Chao-Kai Wen and Shi Jin group provides a pre-processed version of COST2100 dataset in [DropBox](https://www.dropbox.com/scl/fo/tqhriijik2p76j7kfp9jl/h?rlkey=4r1zvjpv4lh5h4fpt7lbpus8c&e=1&st=wqinniyn&dl=0), which is easier to use for the CSI feedback task; You can also download it from [Baidu Netdisk](https://pan.baidu.com/s/1Ggr6gnsXNwzD4ULbwqCmjA).
 
 You can generate your own dataset according to the [open source library of COST2100](https://github.com/cost2100/cost2100) as well. The details of data pre-processing can be found in our paper.
 
@@ -87,5 +87,4 @@ python /home/StarCANet/main.py \
 ## Acknowledgment
 
 This repository is modified from the [CRNet open source code](https://github.com/Kylin9511/CRNet). Thanks Zhilin for his amazing work.
-Thanks Chao-Kai Wen and Shi Jin group for providing the pre-processed COST2100 dataset, you can find their related work named CsiNet in [Github-Python_CsiNet](https://github.com/sydney222/Python_CsiNet) 
-
+Thanks Chao-Kai Wen and Shi Jin group for providing the pre-processed COST2100 dataset, you can find their related work named CsiNet in [Github-Python_CsiNet](https://github.com/sydney222/Python_CsiNet).
